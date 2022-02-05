@@ -1,12 +1,13 @@
-# A Joomla Development Setup
+# Setting up A Development Environment For Joomla!
 
-## Base Environments
+## Operating Systems/Base Environments Covered
 
 - Ubuntu-20.10 (recommended)
 - Ubuntu-20.04 over WSL2, **Windows 10/11**
 - Windows 10/11
 
-### Setup Routes
+### Environment Setup
+Match and choose:
 
 - Linux/WSL2 on Windows
 
@@ -19,8 +20,11 @@
      ```bash
      git clone "https://github.com/teddysun/lamp.git"
      cd lamp
+     # install the lamp stack
      sudo ./lamp.sh --apache_option 1 --db_option 8 --php_option 6 --kodexplorer_option 2 --apache_mod
      ules mod_wsgi,mod_security --php_extensions apcu,xdebug --db_manage_modules phpmyadmin
+     # install composer and npm
+     sudo apt-get install npm composer -y
      ```
 
      </details>
@@ -91,9 +95,11 @@
 
 - Windows Natively
 
-  1. WAMP, XAMPP or EasyPHP. Click [here][jdocs-environment] for links and setup guides on Joomla! Docs
+  1. WAMP, XAMPP or EasyPHP. Click [here][jdocs-environment] for links and setup guides on Joomla! Docs.
+      - Install `composer` and `npm`. This is easiest done through the [Scoop][scoop] package manager for Windows.
 
 ### Setup Your Joomla! Installation
+Joomla! Docs has an excellent resource on setting up an environment that covers much more ground that we will here and includes troubleshooting for problems that you may across. Click [here][jdocs-env] to access.
 #### Clone Joomla
 
 ```bash
@@ -127,3 +133,5 @@ With the [Patch Tester][joomla-patch-tester], you can easily apply changes from 
 [lamp-setup-guide]: #setting-up-an-environment-with-lamp-on-linux
 [docker]: https://docker.com
 [joomla-patch-tester]: https://github.com/joomla-extensions/patchtester
+[jdocs-env]: https://docs.joomla.org/Special:MyLanguage/J4.x:Setting_Up_Your_Local_Environment
+[scoop]: https://scoop.sh
