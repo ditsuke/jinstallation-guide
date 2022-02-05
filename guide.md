@@ -88,16 +88,33 @@
 
   1. WAMP, XAMPP or EasyPHP. Click [here][jdocs-environment] for links and setup guides on Joomla! Docs
 
-### Cloning Joomla
+### Setup Your Joomla! Installation
+#### Clone Joomla
 
 ```bash
 git clone "https://github.com/joomla/joomla-cms.git" -b 4.1-dev
 ```
+#### Build Joomla
+- Install PHP dependencies
+   ```bash
+   composer install
+   ```
+- Install JavaScript Dependencies, Build JS and CSS
+   ```bash
+   npm ci
+   ```
 
-## Setting up an Environment with LAMP on Linux
+#### Install Joomla!
+- Go to your localhost (port depends on how you set up your environment)
+- Follow Joomla! installation instructions.
 
-
-
+#### Install Joomla! Patch Tester (Joomla 4.1)
+With the Patch Tester, you can easily apply changes from Pull Requests and test them. Alternatively, this can also be done using plain Git (and the GitHub CLI client), however we'll set this up here as this is the easiest and recommended way to get started:
+- Log in to the Joomla! Backend: https://localhost/administrator
+- Go to the System Menu
+- Go to Extensions under the Install module
+- Go to the Install from URL Tab and enter: `https://github.com/joomla-extensions/patchtester/releases/download/4.1.0/com_patchtester_4.1.0.zip`
+- Click on Check & Install and follow instructions.
 
 [lamp]: https://github.com/teddysun/lamp
 [podman]: https://podman.io/
