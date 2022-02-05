@@ -81,6 +81,11 @@
         # second service -- use only if you're on WSL2 and run IDE on Windows [onyl WSL2!]
         nohup podman system service --time=0 "tcp:$(get_local_ip_wsl2):8089" < /dev/null > /dev/null 2>&1 &
         ```
+      5. Once you clone the Joomla! repo:
+         0. `cd` to the Joomla! directory.
+         1. Copy the `docker-compose.yml` file from here to the folder.
+         2. Spin up the Podman services: `docker-compose up -d`
+         3. Visit http://localhost:8012 to check if things work (you should find Joomla! here, served by the `joomla-dev` container).
 
         </details>
 

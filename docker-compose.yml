@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  joomla:
+    image: ditsuke/joomla-dev-container:0.3
+    container_name: joomla-dev
+    restart: always
+    depends_on:
+      - joomladb
+    ports:
+      - "8012:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      JOOMLA_DB_HOST: joomla-mariadb
+      JOOMLA_DB_PASSWORD: example
+
+  joomladb:
+    image: mariadb:10.2
+    container_name: joomla-mariadb
+    restart: always
+    volumes:
+      - joomla-mariadb:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+volumes:
+  joomla-mariadb:
+
