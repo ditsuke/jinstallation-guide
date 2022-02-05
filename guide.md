@@ -10,7 +10,7 @@
 
 - Linux/WSL2 on Windows
 
-  1. [LAMP][lamp]: Natively setup your stack on Linux. Click [here][lamp-setup-guide] for setup guide.
+  1. [LAMP][lamp]: Natively setup your stack on Linux.
 
      <details>
          <summary>Expand setup instructions!</summary>
@@ -27,7 +27,7 @@
 
      
 
-  2. Docker or Podman on **Ubuntu-20.10** or **Ubuntu-20.04 WSL2**. Click [here][podman-setup-guide] for setup guide.
+  2. Docker or Podman on **Ubuntu-20.10** or **Ubuntu-20.04 WSL2**.
 
      <details>
          <summary>Expand setup guide!</summary>
@@ -109,7 +109,7 @@ git clone "https://github.com/joomla/joomla-cms.git" -b 4.1-dev
 - Follow Joomla! installation instructions.
 
 #### Install Joomla! Patch Tester (Joomla 4.1)
-With the Patch Tester, you can easily apply changes from Pull Requests and test them. Alternatively, this can also be done using plain Git (and the GitHub CLI client), however we'll set this up here as this is the easiest and recommended way to get started:
+With the [Patch Tester][joomla-patch-tester], you can easily apply changes from Pull Requests and test them. Alternatively, this can also be done using plain Git (and the GitHub CLI client), however we'll set this up here as this is the easiest and recommended way to get started:
 - Log in to the Joomla! Backend: https://localhost/administrator
 - Go to the System Menu
 - Go to Extensions under the Install module
@@ -120,5 +120,5 @@ With the Patch Tester, you can easily apply changes from Pull Requests and test 
 [podman]: https://podman.io/
 [jdocs-environment]: https://docs.joomla.org/Setting_up_your_workstation_for_Joomla_development
 [lamp-setup-guide]: #setting-up-an-environment-with-lamp-on-linux
-
 [docker]: https://docker.com
+[joomla-patch-tester]: https://github.com/joomla-extensions/patchtester
