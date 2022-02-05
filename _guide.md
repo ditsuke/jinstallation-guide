@@ -2,9 +2,9 @@
 
 ## Operating Systems/Base Environments Covered
 
-- Ubuntu-20.10 (recommended)
-- Ubuntu-20.04 over WSL2, **Windows 10/11**
 - Windows 10/11
+- Ubuntu-20.04 over WSL2, **Windows 10/11**
+- Ubuntu-20.10
 
 ### Environment Setup
 Match and choose:
