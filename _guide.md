@@ -100,6 +100,7 @@ Match and choose:
 
 ### Setup Your Joomla! Installation
 Joomla! Docs has an excellent resource on setting up an environment that covers much more ground that we will here and includes troubleshooting for problems that you may across. Click [here][jdocs-env] to access.
+
 #### Clone Joomla
 
 ```bash
@@ -126,6 +127,8 @@ With the [Patch Tester][joomla-patch-tester], you can easily apply changes from 
 - Go to Extensions under the Install module
 - Go to the Install from URL Tab and enter: `https://github.com/joomla-extensions/patchtester/releases/download/4.1.0/com_patchtester_4.1.0.zip`
 - Click on Check & Install and follow instructions.
+#### Maintaining Code Style and Quality
+Joomla uses Php_CodeSniffer to maintain some standards for code style and quality. We have an Joomla! Docs has an excellent guide to CodeSniffer [here][joomla-codesniffer]. An absolute must read to write good quality code that doesn't fail checks all the time.
 
 [lamp]: https://github.com/teddysun/lamp
 [podman]: https://podman.io/
@@ -135,3 +138,4 @@ With the [Patch Tester][joomla-patch-tester], you can easily apply changes from 
 [joomla-patch-tester]: https://github.com/joomla-extensions/patchtester
 [jdocs-env]: https://docs.joomla.org/Special:MyLanguage/J4.x:Setting_Up_Your_Local_Environment
 [scoop]: https://scoop.sh
+[joomla-codesniffer]: https://docs.joomla.org/Joomla_CodeSniffer
