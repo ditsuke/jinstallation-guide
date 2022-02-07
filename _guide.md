@@ -7,11 +7,26 @@
 - Ubuntu-20.10
 
 ### Environment Setup
-Match and choose:
+Written primarily in PHP on the backend, Joomla! requires the PHP interpreter along with a web server to render and serve the web interface over HTTP/S. On the frontend, it extensively uses CSS for styling and JavaScript for functionality and improved UX. Recently there's also been a slow transition moving some parts of the Joomla! web interface over to the VueJS JavaScript Framework.
+
+While a pre-built package would only require the interpreter and web server, Joomla! development also requires some other tools to aid the development process, manage dependencies and compile/transpile its web assets. These tools include Composer to manage PHP dependencies and NPM to manage JavaScript dependencies and build tools to transpile/compile our JS and CSS.
+
+As of Joomla! 4.1, development and usage require:
+| Tool      | Recommended  | Minimum   |
+| ----      | -----------  | -------   |
+| PHP       | 8.0          | 7.2.5     |
+| MySQL     | 5.6+         | 5.6       |
+| Apache    | 2.4+         | 2.4       |
+| Composer  | `N/A`        | `N/A`     |
+| NPM       | `N/A`        | `N/A`     |
+
+Note that we also support other databases (*PostgreSQL*) and web servers (*Nginx*, *MS IIS*). Drop-in MySQL replacements like *MariaDB* and *Percona* are also widely in use and generally work just as well as MySQL, although not _officially_ supported (See [#14141][joomla-mariadb-official-support-thread] for a discussion).
+
 
 - Linux/WSL2 on Windows
 
   1. [LAMP][lamp]: Natively setup your stack on Linux.
+  The Apache, MySQL and PHP (or Perl) stack on Linux is popularly known as the LAMP stack, which just so happens to be the stack Joomla! runs on. To set this stack up, we can use the handy namesake "LAMP" script which takes care of not only installing the dependencies but also some basic configuration and such.
 
      <details>
          <summary>Expand setup instructions!</summary>
@@ -139,3 +154,4 @@ Joomla uses Php_CodeSniffer to maintain some standards for code style and qualit
 [jdocs-env]: https://docs.joomla.org/Special:MyLanguage/J4.x:Setting_Up_Your_Local_Environment
 [scoop]: https://scoop.sh
 [joomla-codesniffer]: https://docs.joomla.org/Joomla_CodeSniffer
+[joomla-mariadb-official-support-thread]: https://github.com/joomla/joomla-cms/issues/14141
