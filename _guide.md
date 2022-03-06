@@ -33,9 +33,9 @@ Note that we also support other databases (**PostgreSQL**) and web servers (**Ng
      ```bash
      git clone "https://github.com/teddysun/lamp.git"
      cd lamp
+     chmod 755 *.sh
      # install the lamp stack
-     sudo ./lamp.sh --apache_option 1 --db_option 8 --php_option 6 --kodexplorer_option 2 --apache_mod
-     ules mod_wsgi,mod_security --php_extensions apcu,xdebug --db_manage_modules phpmyadmin
+     sudo ./lamp.sh --apache_option 1 --apache_modules mod_wsgi,mod_security --db_option 1 --db_root_pwd teddysun.com --php_option 1 --php_extensions apcu,ioncube,imagick,redis,mongodb,libsodium,swoole --db_manage_modules phpmyadmin,adminer --kodexplorer_option 1
      # install composer and npm
      sudo apt-get install npm composer -y
      ```
